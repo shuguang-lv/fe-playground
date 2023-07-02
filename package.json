@@ -1,0 +1,15 @@
+{
+  "name": "fe-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-react-app": "pnpm --filter react-app dev",
+    "run-vue-app": "pnpm --filter vue-app dev",
+    "run-nest-app": "pnpm --filter nest-app start:dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Desmond <shuguang-lv@outlook.com> (https://desmond-lsg.tech/)",
+  "license": "ISC"
+}
