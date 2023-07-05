@@ -2,8 +2,16 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import { useUserContext } from '@/composables/useUserContext'
+import { usePositionFollower } from '@/composables/usePositionFollower'
+import { useMouse } from '@vueuse/core'
 
 const { user } = useUserContext()
+
+const { x, y } = useMouse()
+const Follower = usePositionFollower(() => ({
+  x: x.value,
+  y: y.value
+}))
 </script>
 
 <template>
@@ -15,6 +23,8 @@ const { user } = useUserContext()
     </nav>
 
     <RouterView />
+
+    <Follower class="tw-ml-4">{{ x }}, {{ y }}</Follower>
   </div>
 </template>
 
