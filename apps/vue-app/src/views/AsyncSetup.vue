@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref, computed} from 'vue'
-import { useFetch } from '@vueuse/core'
+import { computed } from 'vue'
 
-const { data, isFetching, error } = useFetch<any>('https://api.github.com/').json()
+import { useUserContext } from '@/composables/useUserContext'
+
+const { user } = useUserContext()
 
 // const data = ref<any>(null)
 
@@ -10,7 +11,7 @@ const { data, isFetching, error } = useFetch<any>('https://api.github.com/').jso
 //   .then(r => r.json())
 //   .then(res => data.value = res)
 
-const user = computed(() => data.value?.current_user_url)
+// const user = computed(() => data.value?.current_user_url)
 </script>
 
 <template>
@@ -18,4 +19,3 @@ const user = computed(() => data.value?.current_user_url)
     {{ user }}
   </div>
 </template>
-

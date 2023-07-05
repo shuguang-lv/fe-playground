@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { useUserContext } from '@/composables/useUserContext'
+
+const { user } = useUserContext()
 </script>
 
 <template>
@@ -8,6 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <nav class="tw-flex tw-justify-center">
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/async-setup">async setup()</RouterLink>
+      <RouterLink to="/injections">Injections</RouterLink>
     </nav>
 
     <RouterView />
