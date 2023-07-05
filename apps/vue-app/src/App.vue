@@ -7,8 +7,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <div class="tw-flex tw-flex-col tw-items-center tw-w-[70vw]">
     <nav class="tw-flex tw-justify-center">
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/content-visibility">Content Visibility</RouterLink>
+      <RouterLink to="/async-setup">async setup()</RouterLink>
     </nav>
 
     <RouterView />
